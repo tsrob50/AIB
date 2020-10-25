@@ -7,6 +7,10 @@ All templates, files and other content on this site are offered as-is, with no w
 Register-Features.ps1 - Register features and resource providers  
 Enable-Identity.ps1 - Create the managed identity, custom role and assign the role to the managed identity
 
+## Video 2
+Win10MultiTemplate.json - Simple AIB Template File  
+
+## Video 3
 
 
 
