@@ -7,6 +7,10 @@ $location = '<Location>'
 # Get the subscription ID
 $subscriptionID = (Get-AzContext).Subscription.Id
 
+# Get the PowerShell modules
+'Az.ImageBuilder', 'Az.ManagedServiceIdentity' | ForEach-Object {Install-Module -Name $_ -AllowPrerelease}
+
+
 # Start by creating the Resource Group
 # the identity will need rights to this group
 New-AzResourceGroup -Name $imageResourceGroup -Location $location
