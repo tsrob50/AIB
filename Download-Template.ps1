@@ -52,7 +52,9 @@ $identityNameResourceId = (Get-AzUserAssignedIdentity -ResourceGroupName $imageR
 ((Get-Content -path $templateFilePath -Raw) -replace '<imageName>',$imageName) | Set-Content -Path $templateFilePath
 ((Get-Content -path $templateFilePath -Raw) -replace '<imgBuilderId>',$identityNameResourceId) | Set-Content -Path $templateFilePath
 
-## Stop here, Edit the template
+# The following commands require the Az.ImageBuilder module
+# Install the PowerShell module if not already installed
+Install-Module -name 'Az.ImageBuilder' -AllowPrerelease
 
 # Run the deployment
 New-AzResourceGroupDeployment -ResourceGroupName $imageResourceGroup -TemplateFile $templateFilePath `
