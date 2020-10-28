@@ -15,7 +15,7 @@ if ((test-path .\Template) -eq $false) {
 # Confirm to overwrite file if it already exists
 if ((test-path .\Template\$Win10FileName) -eq $true) {
     $confirmation = Read-Host "Are you Sure You Want to Replace the Template?:"
-    if ($confirmation -eq 'y' -or $confirmation -eq 'yes' -or $confirmation -eq 'es') {
+    if ($confirmation -eq 'y' -or $confirmation -eq 'yes' -or $confirmation -eq 'Yes') {
         Invoke-WebRequest -Uri $Win10Url -OutFile ".\Template\$Win10FileName" -UseBasicParsing
     }
 }
