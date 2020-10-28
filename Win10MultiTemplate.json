@@ -53,13 +53,6 @@
                 "Expand-Archive 'c:\\temp\\azcopy.zip' 'c:\\temp'",
                 "copy-item 'C:\\temp\\azcopy_windows_amd64_*\\azcopy.exe\\' -Destination 'c:\\temp'"
               ]
-            },
-            {
-              "type": "PowerShell",
-              "name": "GetAzCopy",
-              "inline": [
-                "start-sleep -s 120"
-              ]
             }
           ],
           "distribute": [
