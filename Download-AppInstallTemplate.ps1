@@ -28,7 +28,7 @@ else {
 # destination image resource group
 $imageResourceGroup = 'AIBManagedIDRG'
 # Add the file archive Shared Access Signature
-$archiveSas = "<Shared Access Signature for archive>"
+$archiveSas = "<Shared Access Signature>"
 # Add the path to the PowerShell Install Script
 $installScript = 'https://raw.githubusercontent.com/tsrob50/AIB/main/Install-Applications.ps1'
 # location (see possible locations in main docs)
