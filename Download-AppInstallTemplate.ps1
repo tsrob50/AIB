@@ -6,7 +6,7 @@
 # The template used is from the Azure Quick Start templates
 # it creates a Windows image and outputs the finished image to a Managed IMage
 # Set the template file path and the template file name
-$Win10Url = ""
+$Win10Url = "https://raw.githubusercontent.com/tsrob50/AIB/main/Win10MultiAppsTemplate.json"
 $Win10FileName = "Win10MultiTemplate.json"
 #Test to see if the path exists.  Create it if not
 if ((test-path .\Template) -eq $false) {
@@ -27,6 +27,10 @@ else {
 # The first four need to match Enable-identity.ps1 script
 # destination image resource group
 $imageResourceGroup = 'AIBManagedIDRG'
+# Add the file archive Shared Access Signature
+$archiveSas = "<Enter the archive SAS>"
+# Add the path to the PowerShell Install Script
+$installScript = 'https://raw.githubusercontent.com/tsrob50/AIB/main/Install-Applications.ps1'
 # location (see possible locations in main docs)
 $location = (Get-AzResourceGroup -Name $imageResourceGroup).Location
 # your subscription, this will get your current subscription
@@ -51,6 +55,8 @@ $identityNameResourceId = (Get-AzUserAssignedIdentity -ResourceGroupName $imageR
 ((Get-Content -path $templateFilePath -Raw) -replace '<runOutputName>',$runOutputName) | Set-Content -Path $templateFilePath
 ((Get-Content -path $templateFilePath -Raw) -replace '<imageName>',$imageName) | Set-Content -Path $templateFilePath
 ((Get-Content -path $templateFilePath -Raw) -replace '<imgBuilderId>',$identityNameResourceId) | Set-Content -Path $templateFilePath
+((Get-Content -path $templateFilePath -Raw) -replace '<Shared Access Signature to archive file>',$archiveSas) | Set-Content -Path $templateFilePath
+((Get-Content -path $templateFilePath -Raw) -replace '<URI to PowerShell Script>',$identityNameResourceId) | Set-Content -Path $templateFilePath
 
 # The following commands require the Az.ImageBuilder module
 # Install the PowerShell module if not already installed
