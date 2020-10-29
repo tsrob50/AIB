@@ -23,12 +23,12 @@ else {
     Invoke-WebRequest -Uri $Win10Url -OutFile ".\Template\$Win10FileName" -UseBasicParsing
 }
 
-# Setup the variables
+# Set up the variables
 # The first four need to match Enable-identity.ps1 script
 # destination image resource group
 $imageResourceGroup = 'AIBManagedIDRG'
 # Add the file archive Shared Access Signature
-$archiveSas = "<Enter the archive SAS>"
+$archiveSas = "<Shared Access Signature for archive>"
 # Add the path to the PowerShell Install Script
 $installScript = 'https://raw.githubusercontent.com/tsrob50/AIB/main/Install-Applications.ps1'
 # location (see possible locations in main docs)
@@ -56,7 +56,7 @@ $identityNameResourceId = (Get-AzUserAssignedIdentity -ResourceGroupName $imageR
 ((Get-Content -path $templateFilePath -Raw) -replace '<imageName>',$imageName) | Set-Content -Path $templateFilePath
 ((Get-Content -path $templateFilePath -Raw) -replace '<imgBuilderId>',$identityNameResourceId) | Set-Content -Path $templateFilePath
 ((Get-Content -path $templateFilePath -Raw) -replace '<Shared Access Signature to archive file>',$archiveSas) | Set-Content -Path $templateFilePath
-((Get-Content -path $templateFilePath -Raw) -replace '<URI to PowerShell Script>',$identityNameResourceId) | Set-Content -Path $templateFilePath
+((Get-Content -path $templateFilePath -Raw) -replace '<URI to PowerShell Script>',$installScript ) | Set-Content -Path $templateFilePath
 
 # The following commands require the Az.ImageBuilder module
 # Install the PowerShell module if not already installed
