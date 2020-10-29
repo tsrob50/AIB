@@ -63,10 +63,10 @@
             ]
           },
           {
-            "type": "scriptUri ",
+            "type": "PowerShell",
             "runElevated": true,
             "name": "RunPoShInstall",
-            "scriptUri": ["<URI to PowerShell Script>"]
+            "scriptUri": "<URI to PowerShell Script>"
           }
         ],
         "distribute": [
