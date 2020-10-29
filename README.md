@@ -14,6 +14,7 @@ Win10MultiTemplate.json - Simple AIB Template File
 ## Video 3
 Download-AppInstallTemplate.ps1 - Commands to download and update the template with applications, and run the deployment
 Install-Applications.ps1 - script to install Foxit Reader and NotePad++
+Win10MultiAppsTemplate.json - AIB template file with customizations to download and install software
 
 
 
