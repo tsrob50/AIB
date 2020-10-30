@@ -15,6 +15,13 @@ Win10MultiTemplate.json - Simple AIB Template File
 Download-AppInstallTemplate.ps1 - Commands to download and update the template with applications, and run the deployment  
 Install-Applications.ps1 - script to install Foxit Reader and NotePad++  
 Win10MultiAppsTemplate.json - AIB template file with customizations to download and install software
+### Software Links
+Foxit Reader Enterprise Packaging (requires registration)  
+https://kb.foxitsoftware.com/hc/en-us/articles/360040658811-Where-to-download-Foxit-Reader-with-Enterprise-Packaging-MSI-  
+Notepad++  
+https://notepad-plus-plus.org/downloads/v7.8.8/  
+See comments on creating a custom setting to disable auto update message  
+https://community.notepad-plus-plus.org/post/38160  
 
 
 

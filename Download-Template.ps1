@@ -23,7 +23,7 @@ else {
     Invoke-WebRequest -Uri $Win10Url -OutFile ".\Template\$Win10FileName" -UseBasicParsing
 }
 
-# Set up the variables
+# Setup the variables
 # The first four need to match Enable-identity.ps1 script
 # destination image resource group
 $imageResourceGroup = 'AIBManagedIDRG'
