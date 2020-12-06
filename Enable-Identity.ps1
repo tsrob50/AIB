@@ -49,7 +49,7 @@ $RoleAssignParams = @{
     RoleDefinitionName = $imageRoleDefName
     Scope = "/subscriptions/$subscriptionID/resourceGroups/$imageResourceGroup"
   }
-  New-AzRoleAssignment @RoleAssignParams
+New-AzRoleAssignment @RoleAssignParams
 
 # Verify Role Assignment
 Get-AzRoleAssignment -ObjectId $identityNamePrincipalId | Select-Object DisplayName,RoleDefinitionName
