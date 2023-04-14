@@ -20,7 +20,7 @@ Install-Applications.ps1 - script to install Foxit Reader and NotePad++
 ImageBuilderPortalCommands.ps1 - Commands for the initial configuration of Azure Image Builder in a subscription
 
 ## Video 5
-AIBPortalInlineCmds.ps1 - Inline commands used with AIB portal deployment
+AIBPortalInlineCmds.ps1 - Inline commands used with AIB portal deployment  
 AIBPortalInstallApps.ps1 - PowerShell installation script used with AIB portal deployment
 
 ### Software Links
