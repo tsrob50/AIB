@@ -19,6 +19,10 @@ Install-Applications.ps1 - script to install Foxit Reader and NotePad++
 ## Video 4
 ImageBuilderPortalCommands.ps1 - Commands for the initial configuration of Azure Image Builder in a subscription
 
+## Video 5
+AIBPortalInlineCmds.ps1 - Inline commands used with AIB portal deployment
+AIBPortalInstallApps.ps1 - PowerShell installation script used with AIB portal deployment
+
 ### Software Links
 Foxit Reader Enterprise Packaging (requires registration)  
 https://kb.foxitsoftware.com/hc/en-us/articles/360040658811-Where-to-download-Foxit-Reader-with-Enterprise-Packaging-MSI-  
